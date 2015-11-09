@@ -1,0 +1,6 @@
+C:\Users\Thomas Frandsen\Documents\GitHub\100grapejuice\100grapejuice\bin\Debug\100grapejuice.exe.config
+C:\Users\Thomas Frandsen\Documents\GitHub\100grapejuice\100grapejuice\bin\Debug\100grapejuice.exe
+C:\Users\Thomas Frandsen\Documents\GitHub\100grapejuice\100grapejuice\bin\Debug\100grapejuice.pdb
+C:\Users\Thomas Frandsen\Documents\GitHub\100grapejuice\100grapejuice\obj\Debug\100grapejuice.csprojResolveAssemblyReference.cache
+C:\Users\Thomas Frandsen\Documents\GitHub\100grapejuice\100grapejuice\obj\Debug\100grapejuice.exe
+C:\Users\Thomas Frandsen\Documents\GitHub\100grapejuice\100grapejuice\obj\Debug\100grapejuice.pdb
