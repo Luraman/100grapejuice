@@ -55,13 +55,13 @@ namespace _100grapejuice
       }
     }
 
-    public void Set(int ammount, out int walled)
+    public void Set(int amount, out int walled)
     {
-      Current = ammount;
+      Current = amount;
       wall(out walled);
     }
 
-    void wall(out int walled)
+    private void wall(out int walled)
     {
       if (Current <= 0)
       {

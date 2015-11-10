@@ -16,17 +16,24 @@ namespace _100grapejuice
       }
     }
 
-    static void Main(string[] args)
+    private static void Main(string[] args)
     {
-      Character Luraman = new Character(5);
+      Character Luraman = new Character(5, 2, -1, -1, 5);
+
+      Console.WriteLine(Luraman.Power.Get());
+
+      Luraman.Power.Buff(3, _event => Luraman.Dead += _event);
+
+      Console.WriteLine(Luraman.Power.Get());
 
       Action DeathNote = () => Console.WriteLine("u r ded");
 
       Luraman.Dead += DeathNote;
 
       int _;
-      Luraman.Damage(-2, out _);
-      Luraman.Damage(5, out _);
+      Luraman.TakeDamage(6, out _);
+
+      Console.WriteLine(Luraman.Power.Get());
 
       Console.ReadKey();
     }
