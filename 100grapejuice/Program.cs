@@ -8,32 +8,21 @@ namespace _100grapejuice
 {
   class Program
   {
-    public static void CallEvent(Action _event)
-    {
-      if (_event != null)
-      {
-        _event();
-      }
-    }
-
     private static void Main(string[] args)
     {
-      Character Luraman = new Character(5, 2, -1, -1, 5);
+      DiceManager dices = new DiceManager(new List<Dice>(){}, new Random().Next());
+      Buff<DiceManager> AddD10 = new Buff<DiceManager>((client) => { client.NewDice(new List<Range>() { new Range(1, 6) }); });
 
-      Console.WriteLine(Luraman.Power.Get());
+      for (int i = 0; i < 10; i++)
+      {
+        dices.Buff(AddD10, (client) => { });
+      }
+      DiceManager buffeddices = dices.ApplyBuffs();
+      for (int i = 0; i < 100; i++)
+      {
+        Console.Write(String.Format("{0} ", buffeddices.Roll()));
+      }
 
-      Luraman.Power.Buff(3, _event => Luraman.Dead += _event);
-
-      Console.WriteLine(Luraman.Power.Get());
-
-      Action DeathNote = () => Console.WriteLine("u r ded");
-
-      Luraman.Dead += DeathNote;
-
-      int _;
-      Luraman.TakeDamage(6, out _);
-
-      Console.WriteLine(Luraman.Power.Get());
 
       Console.ReadKey();
     }

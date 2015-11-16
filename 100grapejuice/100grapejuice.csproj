@@ -41,11 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bar.cs" />
-    <Compile Include="Character.cs" />
+    <Compile Include="Buff.cs" />
+    <Compile Include="BuffManager.cs" />
+    <Compile Include="Dice.cs" />
+    <Compile Include="DiceManager.cs" />
+    <Compile Include="Exceptions\SelectionHasNoOptionsException.cs" />
+    <Compile Include="IAppliable.cs" />
+    <Compile Include="IBuffable.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Stat.cs" />
+    <Compile Include="Range.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
